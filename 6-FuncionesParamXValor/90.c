@@ -15,7 +15,8 @@ int main() {
     while(opc != 5){
         printf("\nSelecciones: ");
         scanf("%d", &opc);
-        float r;
+        int r;
+        float f;
         switch(opc){
             case 1:
             r = n1 + n2;
@@ -30,9 +31,13 @@ int main() {
             printf("%d * %d = %d", n1, n2, r);
             break;
             case 4:
-            r = n1 / n2;
-            printf("%d / %d = %f", n1, n2, r);
-            break;
+                if (n2 == 0) {
+                    printf("Error: División por 0.\n");
+                } else {
+                    f = n1 / n2;  
+                    printf("%d / %d = %.2f", n1, n2, f);
+                }
+                break;
             default:
             break;        
         }
