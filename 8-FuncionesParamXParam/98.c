@@ -2,16 +2,17 @@
 #include <ctype.h>
 #include <string.h>
 
-int main() {
-    char u, v = 'A';
-    char *pu, *pv = &v;
+int verD(char a, int *b){
+    char len = &a; 
+    int b = strlen(len);
+    return b;
+}
 
-    *pv = v + 1;
-    u = *pv + 1;
-    pu = &u;
-    printf("%c ", u);
-    printf("%c ", v);
-    printf("%c ", *pu);
-    printf("%c ", *pv);
+int main() {
+    char c; 
+    gets(&c);
+    int b;
+    b = verD(&c, &b);
+    printf("%s", &b);
 }
 
